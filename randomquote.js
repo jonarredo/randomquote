@@ -30,3 +30,19 @@ const data = {
             '2000 AD - Present', '1915 AD - 2000 AD', 
             '1200 BC - 1150 BC', '1402 AD - 1464 AD']
 }
+
+const getRandomMessage = () => {
+    // grabs a random index from each property array
+    let randomQuote = data['quote'][Math.floor(Math.random() * data['quote'].length)];
+    let randomAuthor = data['author'][Math.floor(Math.random() * data['author'].length)];
+    let randomDates = data['dates'][Math.floor(Math.random() * data['dates'].length)];
+
+    // Creates the format for the display
+    console.log("'" + randomQuote + "'");
+    console.log('   - ' + randomAuthor + '(' + randomDates + ')');
+}
+
+
+// Runs the program
+getRandomMessage();
+
